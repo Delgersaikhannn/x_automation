@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Help me pick Thanksgiving gifts</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+
+  <section class="screen intro" id="intro">
+    <div class="copy">
+      <p class="eyebrow">Thanksgiving gift run</p>
+      <h1>Help me pick the gifts.</h1>
+      <p class="lede">Choose who we're shopping for, then swipe. Right to love it, left to skip.</p>
+      <div class="chips" id="recipients" role="group" aria-label="Who are we shopping for?"></div>
+    </div>
+    <div class="fan" aria-hidden="true" id="fan"></div>
+  </section>
+
+  <section class="screen play" id="play" hidden>
+    <aside class="panel">
+      <button class="link" id="back" type="button">&larr; Someone else</button>
+      <h2 id="play-title"></h2>
+      <div class="progress" role="progressbar" aria-valuemin="0" id="progress"><span></span></div>
+      <p class="hint"><kbd>&larr;</kbd> skip &middot; <kbd>&rarr;</kbd> love &middot; or drag the card</p>
+      <div class="tray">
+        <p class="tray-label" id="tray-label">Loved (0)</p>
+        <ul class="tray-items" id="tray"></ul>
+      </div>
+    </aside>
+    <div class="stage">
+      <div class="deck" id="deck" aria-live="polite"></div>
+      <div class="actions">
+        <button class="round nope" id="btn-nope" type="button" aria-label="Skip">&#x2715;</button>
+        <button class="round like" id="btn-like" type="button" aria-label="Love it">&#x2665;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen done" id="done" hidden>
+    <div class="copy">
+      <p class="eyebrow" id="done-eyebrow"></p>
+      <h2 id="done-title"></h2>
+      <p class="lede" id="done-lede"></p>
+      <div class="row">
+        <button class="btn primary" id="again" type="button">Swipe again</button>
+        <button class="btn" id="restart" type="button">Someone else</button>
+      </div>
+    </div>
+    <ol class="picks" id="picks"></ol>
+  </section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

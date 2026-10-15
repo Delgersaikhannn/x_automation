@@ -1,0 +1,15 @@
+{
+  "name": "x-portals",
+  "private": true,
+  "type": "module",
+  "description": "Interactive embeds that play inside posts on X via Player Cards.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "previews": "node scripts/previews.mjs",
+    "check": "node scripts/check-card.mjs"
+  }
+}
